@@ -2,42 +2,42 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../assets/styles/login.css'
 
-function LoginPage() {
-  const [loginMethod, setLoginMethod] = useState('email')
+function RegisterPage() {
+  const [signupMethod, setSignupMethod] = useState('email')
 
   return (
     <main className="login-page">
       <section className="login-showcase">
-        <p className="login-eyebrow">Batylink workspace</p>
-        <h1>Sign in to manage bookings, campaigns, and provider leads.</h1>
+        <p className="login-eyebrow">Join Batylink</p>
+        <h1>Create an account for services, bookings, and provider growth.</h1>
         <p className="login-copy">
-          Keep customer requests, service conversations, and team activity in one
-          focused workspace.
+          Start as a customer looking for trusted help, or register as a provider
+          ready to manage leads and service requests.
         </p>
 
         <div className="login-metrics">
           <article>
-            <strong>48%</strong>
-            <span>faster handoff from request capture to first response</span>
+            <strong>2 min</strong>
+            <span>average setup time for a new customer or provider profile</span>
           </article>
           <article>
-            <strong>12k</strong>
-            <span>monthly conversations tracked across customer and provider teams</span>
+            <strong>24/7</strong>
+            <span>access to requests, conversations, and account activity</span>
           </article>
         </div>
       </section>
 
-      <section className="login-panel" aria-label="Login form">
-        <div className="login-card">
+      <section className="login-panel" aria-label="Register form">
+        <div className="login-card register-card">
           <div className="login-card-header">
-            <p className="login-tag">Welcome back</p>
-            <h2>Login</h2>
-            <p>Choose your role and sign in with email, phone, OTP, or a connected account.</p>
+            <p className="login-tag">Get started</p>
+            <h2>Register</h2>
+            <p>Create your Batylink account with email, phone, or a connected account.</p>
           </div>
 
           <form className="login-form">
             <fieldset className="login-segment-group">
-              <legend>Continue as</legend>
+              <legend>Register as</legend>
               <label>
                 <input type="radio" name="role" value="customer" defaultChecked />
                 <span>Customer</span>
@@ -49,14 +49,14 @@ function LoginPage() {
             </fieldset>
 
             <fieldset className="login-method-group">
-              <legend>Login method</legend>
+              <legend>Signup method</legend>
               <label>
                 <input
                   type="radio"
                   name="method"
                   value="email"
-                  checked={loginMethod === 'email'}
-                  onChange={() => setLoginMethod('email')}
+                  checked={signupMethod === 'email'}
+                  onChange={() => setSignupMethod('email')}
                 />
                 <span>Email</span>
               </label>
@@ -65,8 +65,8 @@ function LoginPage() {
                   type="radio"
                   name="method"
                   value="phone"
-                  checked={loginMethod === 'phone'}
-                  onChange={() => setLoginMethod('phone')}
+                  checked={signupMethod === 'phone'}
+                  onChange={() => setSignupMethod('phone')}
                 />
                 <span>Phone</span>
               </label>
@@ -75,14 +75,19 @@ function LoginPage() {
                   type="radio"
                   name="method"
                   value="otp"
-                  checked={loginMethod === 'otp'}
-                  onChange={() => setLoginMethod('otp')}
+                  checked={signupMethod === 'otp'}
+                  onChange={() => setSignupMethod('otp')}
                 />
                 <span>OTP</span>
               </label>
             </fieldset>
 
-            {loginMethod === 'email' && (
+            <label>
+              Full name
+              <input type="text" name="name" placeholder="Your name" autoComplete="name" />
+            </label>
+
+            {signupMethod === 'email' && (
               <>
                 <label>
                   Email address
@@ -99,14 +104,14 @@ function LoginPage() {
                   <input
                     type="password"
                     name="password"
-                    placeholder="Enter your password"
-                    autoComplete="current-password"
+                    placeholder="Create a password"
+                    autoComplete="new-password"
                   />
                 </label>
               </>
             )}
 
-            {loginMethod === 'phone' && (
+            {signupMethod === 'phone' && (
               <>
                 <label>
                   Phone number
@@ -123,14 +128,14 @@ function LoginPage() {
                   <input
                     type="password"
                     name="phone-password"
-                    placeholder="Enter your password"
-                    autoComplete="current-password"
+                    placeholder="Create a password"
+                    autoComplete="new-password"
                   />
                 </label>
               </>
             )}
 
-            {loginMethod === 'otp' && (
+            {signupMethod === 'otp' && (
               <>
                 <label>
                   Email or phone
@@ -155,24 +160,22 @@ function LoginPage() {
               </>
             )}
 
-            <div className="login-form-row">
-              <label className="login-checkbox">
-                <input type="checkbox" name="remember" />
-                <span>Remember me</span>
-              </label>
-
-              <a href="/">Forgot password?</a>
-            </div>
+            <label className="login-checkbox register-terms">
+              <input type="checkbox" name="terms" />
+              <span>
+                I agree to the <Link to="/">terms</Link> and <Link to="/">privacy policy</Link>
+              </span>
+            </label>
 
             <button type="submit" className="login-submit">
-              Sign in
+              Create account
             </button>
 
             <div className="login-divider">
-              <span>or continue with</span>
+              <span>or sign up with</span>
             </div>
 
-            <div className="login-socials" aria-label="Social login options">
+            <div className="login-socials" aria-label="Social signup options">
               <button type="button" className="login-social-button">
                 <span className="social-mark google">G</span>
                 Google
@@ -193,7 +196,7 @@ function LoginPage() {
           </form>
 
           <p className="login-footer">
-            Need an account? <Link to="/register">Register now</Link>
+            Already have an account? <Link to="/login">Login</Link>
           </p>
         </div>
       </section>
@@ -201,4 +204,4 @@ function LoginPage() {
   )
 }
 
-export default LoginPage
+export default RegisterPage

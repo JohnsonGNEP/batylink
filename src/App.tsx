@@ -2,6 +2,7 @@ import './App.css'
 import { Routes, Route } from "react-router-dom";
 import HomePage from './pages/home';
 import LoginPage from "./pages/login";
+import RegisterPage from "./pages/register";
 
 
 const App: React.FC = () => {
@@ -10,6 +11,7 @@ const App: React.FC = () => {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/login" element={<LoginPage />} />
+      <Route path="/register" element={<RegisterPage />} />
       <Route path="*" element={<div><h1>Page no found</h1></div>} />
     </Routes>
   )
