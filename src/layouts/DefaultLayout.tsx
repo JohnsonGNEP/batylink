@@ -1,13 +1,15 @@
 import { Outlet } from "react-router-dom";
 
-
 const DefaultLayout: React.FC = () => {
-
   return (
     <div className="container">
-        <Outlet />
-    </div>
-  )
-}
+     {/*  TODO: Place header component here */}
 
-export default DefaultLayout
+      <Outlet />
+      
+      {/* TODO: Place footer component here */}
+    </div>
+  );
+};
+
+export default DefaultLayout;
