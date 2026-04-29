@@ -1,8 +1,20 @@
+import { Link } from 'react-router-dom'
 import '../assets/styles/home.css'
 
 function HomePage() {
   return (
     <main className="home-page">
+      <nav className="home-menu" aria-label="Main navigation">
+        <Link className="home-brand" to="/">
+          Batylink
+        </Link>
+        <div className="home-menu-actions">
+          <Link className="menu-link" to="/login">
+            Login
+          </Link>
+        </div>
+      </nav>
+
       <section className="home-hero">
         <div>
           <p className="home-eyebrow">Find the right handyman fast</p>
@@ -16,7 +28,6 @@ function HomePage() {
           <div className="home-actions">
             <button className="button-primary">Find a handyman</button>
             <button className="button-secondary">Browse services</button>
-            <button className="button-secondary">Login</button>
           </div>
 
           <div className="home-metrics">
