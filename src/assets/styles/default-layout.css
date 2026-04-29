@@ -1,0 +1,14 @@
+.default-layout {
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(125, 58, 255, 0.18),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(229, 120, 255, 0.12),
+      transparent 22%
+    ),
+    #f5f0ff;
+}
