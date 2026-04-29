@@ -16,6 +16,7 @@ function HomePage() {
           <div className="home-actions">
             <button className="button-primary">Find a handyman</button>
             <button className="button-secondary">Browse services</button>
+            <button className="button-secondary">Login</button>
           </div>
 
           <div className="home-metrics">
