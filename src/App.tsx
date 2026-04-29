@@ -4,6 +4,7 @@ import HomePage from './pages/home';
 import LoginPage from "./pages/login";
 import DefaultLayout from './layouts/DefaultLayout';
 import AuthLayout from './layouts/AuthLayout';
+import PageNotFound from './pages/page-not-found';
 
 
 const App: React.FC = () => {
@@ -21,7 +22,7 @@ const App: React.FC = () => {
       </Route>
 
       {/* Error Pages */}
-      <Route path="*" element={<div><h1>Page no found</h1></div>} />
+      <Route path="*" element={<PageNotFound />} />
     </Routes>
   )
 }
