@@ -21,7 +21,7 @@ const App: React.FC = () => {
       </Route>
 
       {/* Error Pages */}
-      <Route path="*" element={<div><h1>Page no found</h1></div>} />
+      <Route path="*" element={<div><h1>Page not found</h1></div>} />
     </Routes>
   )
 }

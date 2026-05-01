@@ -1,19 +1,8 @@
-import { Link } from 'react-router-dom'
 import '../assets/styles/home.css'
 
 function HomePage() {
   return (
     <main className="home-page">
-      <nav className="home-menu" aria-label="Main navigation">
-        <Link className="home-brand" to="/">
-          Batylink
-        </Link>
-        <div className="home-menu-actions">
-          <Link className="menu-link" to="/login">
-            Login
-          </Link>
-        </div>
-      </nav>
 
       <section className="home-hero">
         <div>
@@ -40,7 +29,7 @@ function HomePage() {
               <span>Completed handyman jobs last month</span>
             </article>
             <article className="metric-card">
-              <strong>30 min</strong>
+              <strong>20 min</strong>
               <span>Average response time from local experts</span>
             </article>
           </div>
@@ -84,7 +73,7 @@ function HomePage() {
               </div>
               <div className="feature-card">
                 <h3>Maintenance</h3>
-                <p>Schedule routine service for plumbing, electrical, carpentry, and more.</p>
+                <p>Schedule blabla routine service for plumbing, electrical, carpentry, and more.</p>
               </div>
             </div>
           </div>
