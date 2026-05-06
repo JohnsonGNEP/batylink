@@ -1,0 +1,226 @@
+.filter-sidebar {
+  background: rgba(250, 244, 255, 0.97);
+  border: 1px solid rgba(124, 58, 237, 0.12);
+  border-radius: 22px;
+  padding: 1.5rem;
+  position: sticky;
+  top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.filter-sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.filter-sidebar-header h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1f114a;
+}
+
+.filter-close {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: #7a6b8f;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0.1rem 0.3rem;
+}
+
+.filter-close:hover {
+  color: #1f114a;
+}
+
+/* ── Filter section ── */
+.filter-section {
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(124, 58, 237, 0.08);
+}
+
+.filter-section:last-child {
+  border-bottom: none;
+}
+
+.filter-section h3 {
+  margin: 0 0 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #3c1360;
+}
+
+.filter-label-note {
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  color: #7a6b8f;
+  font-size: 0.8rem;
+}
+
+/* ── Category pills ── */
+.filter-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.filter-cat-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 0.8rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #3c1360;
+  font-weight: 500;
+  transition: background 140ms ease;
+  user-select: none;
+}
+
+.filter-cat-pill input[type='checkbox'] {
+  display: none;
+}
+
+.filter-cat-pill:hover {
+  background: rgba(124, 58, 237, 0.07);
+}
+
+.filter-cat-pill.active {
+  background: rgba(124, 58, 237, 0.12);
+  color: #5b21b6;
+  font-weight: 700;
+}
+
+/* ── Option buttons (price / rating) ── */
+.filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filter-option-btn {
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  border: 1.5px solid rgba(124, 58, 237, 0.2);
+  background: transparent;
+  color: #3c1360;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 140ms ease, border-color 140ms ease, color 140ms ease;
+}
+
+.filter-option-btn:hover {
+  background: rgba(124, 58, 237, 0.07);
+  border-color: rgba(124, 58, 237, 0.35);
+}
+
+.filter-option-btn.active {
+  background: #7c3aed;
+  border-color: #7c3aed;
+  color: white;
+}
+
+/* ── Availability toggle ── */
+.filter-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  user-select: none;
+  font-size: 0.92rem;
+  color: #3c1360;
+  font-weight: 500;
+}
+
+.filter-toggle input[type='checkbox'] {
+  display: none;
+}
+
+.toggle-track {
+  position: relative;
+  width: 40px;
+  height: 22px;
+  border-radius: 999px;
+  background: rgba(124, 58, 237, 0.15);
+  border: 1.5px solid rgba(124, 58, 237, 0.2);
+  transition: background 160ms ease, border-color 160ms ease;
+  flex-shrink: 0;
+}
+
+.toggle-thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #9d7ec9;
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+.filter-toggle input:checked + .toggle-track {
+  background: #7c3aed;
+  border-color: #7c3aed;
+}
+
+.filter-toggle input:checked + .toggle-track .toggle-thumb {
+  transform: translateX(18px);
+  background: white;
+}
+
+/* ── Mobile: slide-in overlay ── */
+.filter-overlay {
+  display: none;
+}
+
+@media (max-width: 820px) {
+  .filter-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: min(320px, 88vw);
+    border-radius: 0 24px 24px 0;
+    overflow-y: auto;
+    transform: translateX(-105%);
+    transition: transform 260ms cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 50;
+    box-shadow: 4px 0 32px rgba(124, 58, 237, 0.15);
+  }
+
+  .filter-sidebar--open {
+    transform: translateX(0);
+  }
+
+  .filter-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .filter-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(31, 17, 74, 0.4);
+    backdrop-filter: blur(2px);
+    z-index: 49;
+    animation: fade-in 220ms ease forwards;
+  }
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+}
