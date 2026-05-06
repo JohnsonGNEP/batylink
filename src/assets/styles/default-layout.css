@@ -43,6 +43,16 @@
   color: #e9d5ff;
 }
 
+.search-icon {
+  color: #7c3aed; 
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.search-icon:hover {
+  color: #a855f7; /* Lighter purple on hover */
+  transform: scale(1.1); /* Subtle "pop" effect */
+}
+
 .page-footer {
   padding: 1.5rem 2rem;
   background: var(--bg);
