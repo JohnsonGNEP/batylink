@@ -4,7 +4,7 @@ import "../assets/styles/auth-layout.css";
 const AuthLayout: React.FC = () => {
   return (
     <div className="auth-layout">
-      <div className="container">
+      <div>
         <Outlet />
       </div>
     </div>

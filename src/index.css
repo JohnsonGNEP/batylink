@@ -1,7 +1,22 @@
+:root {
+  --heading:      "Roboto Slab", serif;
+  --text-h:       #1f114a;
+  --text:         #54416e;
+  --accent:       #7c3aed;
+  --accent-bg:    rgba(124, 58, 237, 0.08);
+  --accent-border: rgba(124, 58, 237, 0.3);
+  --bg:           #f5f0ff;
+  --border:       rgba(124, 58, 237, 0.15);
+  --shadow:       0 10px 30px rgba(124, 58, 237, 0.1);
+  --social-bg:    rgba(247, 237, 255, 0.95);
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: "Lato", sans-serif;
+  color: var(--text);
+  background: var(--bg);
 }
 
 p {
