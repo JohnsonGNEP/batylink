@@ -1,0 +1,5 @@
+.page-footer {
+  padding: 1.5rem 2rem;
+  background: var(--bg);
+  border-top: 1px solid rgba(163, 110, 253, 0.18);
+}
