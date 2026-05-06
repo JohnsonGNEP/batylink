@@ -1,47 +1,96 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../assets/styles/login.css'
 
 function LoginPage() {
+  const [loginMethod, setLoginMethod] = useState('email')
+
   return (
-    <main className="login-page">
-      <section className="login-showcase">
-        <p className="login-eyebrow">Batylink workspace</p>
-        <h1>Sign in to manage campaigns, leads, and live performance.</h1>
-        <p className="login-copy">
-          Keep your client pipeline in one place with a focused dashboard for outreach,
-          conversions, and team activity.
-        </p>
-
-        <div className="login-metrics">
-          <article>
-            <strong>48%</strong>
-            <span>faster handoff from lead capture to first response</span>
-          </article>
-          <article>
-            <strong>12k</strong>
-            <span>monthly conversations tracked across active teams</span>
-          </article>
-        </div>
-      </section>
-
+    <main className="login-page login-page-centered">
       <section className="login-panel" aria-label="Login form">
         <div className="login-card">
+          <div className="login-brand">
+            <Link to="/" aria-label="Batylink home">
+              Batylink
+            </Link>
+          </div>
+
           <div className="login-card-header">
-            <p className="login-tag">Welcome back</p>
-            <h2>Login</h2>
-            <p>Use your work email and password to access your account.</p>
+            <h1>Sign in or create account</h1>
           </div>
 
           <form className="login-form">
-            <label>
-              Email address
-              <input type="email" name="email" placeholder="name@company.com" />
-            </label>
+            <fieldset className="login-method-group">
+              <legend>Login method</legend>
+              <label>
+                <input
+                  type="radio"
+                  name="method"
+                  value="email"
+                  checked={loginMethod === 'email'}
+                  onChange={() => setLoginMethod('email')}
+                />
+                <span>Email</span>
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="method"
+                  value="phone"
+                  checked={loginMethod === 'phone'}
+                  onChange={() => setLoginMethod('phone')}
+                />
+                <span>Phone</span>
+              </label>
+            </fieldset>
 
-            <label>
-              Password
-              <input type="password" name="password" placeholder="Enter your password" />
-            </label>
+            {loginMethod === 'email' && (
+              <>
+                <label>
+                  Email address
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="name@company.com"
+                    autoComplete="email"
+                  />
+                </label>
+
+                <label>
+                  Password
+                  <input
+                    type="password"
+                    name="password"
+                    placeholder="Enter your password"
+                    autoComplete="current-password"
+                  />
+                </label>
+              </>
+            )}
+
+            {loginMethod === 'phone' && (
+              <>
+                <label>
+                  Phone number
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="+1 555 0100"
+                    autoComplete="tel"
+                  />
+                </label>
+
+                <label>
+                  Password
+                  <input
+                    type="password"
+                    name="phone-password"
+                    placeholder="Enter your password"
+                    autoComplete="current-password"
+                  />
+                </label>
+              </>
+            )}
 
             <div className="login-form-row">
               <label className="login-checkbox">
@@ -49,16 +98,16 @@ function LoginPage() {
                 <span>Remember me</span>
               </label>
 
-              <a href="/">Forgot password?</a>
+              <Link to="/">Forgot password?</Link>
             </div>
 
             <button type="submit" className="login-submit">
-              Sign in
+              Continue
             </button>
           </form>
 
           <p className="login-footer">
-            Need an account? <Link to="/">Contact your administrator</Link>
+            New to Batylink? <Link to="/register">Create your account</Link>
           </p>
         </div>
       </section>

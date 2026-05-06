@@ -2,6 +2,8 @@ import './App.css'
 import { Routes, Route } from "react-router-dom";
 import HomePage from './pages/home';
 import LoginPage from "./pages/login";
+import RegisterPage from "./pages/register";
+import ProfilePage, { ProfileEditPage } from "./pages/profile";
 import CategoriesPage from './pages/categories';
 import DefaultLayout from './layouts/DefaultLayout';
 import AuthLayout from './layouts/AuthLayout';
@@ -16,11 +18,14 @@ const App: React.FC = () => {
       <Route element={<DefaultLayout />}>
         <Route path="/" element={<HomePage />} />
         <Route path="/services" element={<CategoriesPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/profile/edit" element={<ProfileEditPage />} />
       </Route>
 
       {/* Auth Layouts */}
       <Route element={<AuthLayout />}>
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
       </Route>
 
       {/* Error Pages */}
@@ -30,3 +35,4 @@ const App: React.FC = () => {
 }
 
 export default App
+
