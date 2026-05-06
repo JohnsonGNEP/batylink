@@ -15,7 +15,7 @@ const App: React.FC = () => {
       {/* Default Layouts */}
       <Route element={<DefaultLayout />}>
         <Route path="/" element={<HomePage />} />
-        <Route path="/categories" element={<CategoriesPage />} />
+        <Route path="/services" element={<CategoriesPage />} />
       </Route>
 
       {/* Auth Layouts */}
