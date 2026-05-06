@@ -3,6 +3,7 @@ import '../assets/styles/home.css'
 function HomePage() {
   return (
     <main className="home-page">
+
       <section className="home-hero">
         <div>
           <p className="home-eyebrow">Find the right handyman fast</p>
@@ -16,7 +17,6 @@ function HomePage() {
           <div className="home-actions">
             <button className="button-primary">Find a handyman</button>
             <button className="button-secondary">Browse services</button>
-            <button className="button-secondary">Login</button>
           </div>
 
           <div className="home-metrics">
@@ -29,7 +29,7 @@ function HomePage() {
               <span>Completed handyman jobs last month</span>
             </article>
             <article className="metric-card">
-              <strong>30 min</strong>
+              <strong>20 min</strong>
               <span>Average response time from local experts</span>
             </article>
           </div>
@@ -73,7 +73,7 @@ function HomePage() {
               </div>
               <div className="feature-card">
                 <h3>Maintenance</h3>
-                <p>Schedule routine service for plumbing, electrical, carpentry, and more.</p>
+                <p>Schedule blabla routine service for plumbing, electrical, carpentry, and more.</p>
               </div>
             </div>
           </div>
