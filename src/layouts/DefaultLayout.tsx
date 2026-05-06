@@ -4,11 +4,11 @@ import Header from "../components/Header";
 
 const DefaultLayout: React.FC = () => {
   return (
-    <div className="container">
-     <Header />
-
-      <Outlet />
-      
+    <div>
+      <Header />
+      <main>
+        <Outlet />
+      </main>
       <Footer />
     </div>
   );
