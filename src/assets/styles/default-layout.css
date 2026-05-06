@@ -1,0 +1,74 @@
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: rgba(255, 255, 255, 0.8);
+  background-color: #f5f3ff;
+  border-bottom: 1px solid rgba(163, 110, 253, 0.18);
+  box-shadow: #a855f7 0px 4px 12px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.page-header .page-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: linear-gradient(135deg, #7c3aed, #a855f7);
+  text-decoration: none;
+}
+
+.page-header .nav-link {
+  color: #7c3aed;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.page-header .nav-link:hover {
+  color: #a855f7; /* Lightens up on hover */
+}
+
+.page-header ul {
+  display: inline-flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 10px;
+}
+
+.page-header li:not(:last-child)::after {
+  content: '|';
+  margin-left: 10px;
+  color: #e9d5ff;
+}
+
+.search-icon {
+  color: #7c3aed; 
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.search-icon:hover {
+  color: #a855f7; /* Lighter purple on hover */
+  transform: scale(1.1); /* Subtle "pop" effect */
+}
+
+.page-footer {
+  padding: 1.5rem 2rem;
+  background: var(--bg);
+  border-top: 1px solid rgba(163, 110, 253, 0.18);
+}
+.default-layout {
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(125, 58, 255, 0.18),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(229, 120, 255, 0.12),
+      transparent 22%
+    ),
+    #f5f0ff;
+}

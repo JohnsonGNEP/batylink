@@ -1,0 +1,106 @@
+<svg width="640" height="420" viewBox="0 0 640 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="640" height="420" rx="32" fill="#F5EEFF"/>
+
+  <!-- Soft blobs -->
+  <circle cx="88" cy="76" r="78" fill="#EDE0FF" opacity="0.5"/>
+  <circle cx="566" cy="354" r="90" fill="#EDE0FF" opacity="0.5"/>
+
+  <!-- Stars -->
+  <circle cx="52" cy="50" r="3" fill="#C4A8F5"/>
+  <circle cx="205" cy="28" r="2" fill="#C4A8F5"/>
+  <circle cx="592" cy="58" r="3.5" fill="#C4A8F5"/>
+  <circle cx="618" cy="198" r="2" fill="#C4A8F5"/>
+  <circle cx="24" cy="278" r="2.5" fill="#C4A8F5"/>
+  <circle cx="88" cy="400" r="3" fill="#C4A8F5"/>
+  <circle cx="576" cy="145" r="2" fill="#C4A8F5"/>
+  <circle cx="480" cy="38" r="3" fill="#C4A8F5"/>
+  <circle cx="160" cy="408" r="2" fill="#C4A8F5"/>
+  <circle cx="430" cy="402" r="2.5" fill="#C4A8F5"/>
+  <circle cx="18" cy="155" r="2" fill="#C4A8F5"/>
+  <circle cx="608" cy="295" r="2" fill="#C4A8F5"/>
+  <circle cx="390" cy="18" r="2.5" fill="#C4A8F5"/>
+
+  <!-- Planet (upper right) -->
+  <circle cx="548" cy="84" r="62" fill="#DCC8FF" opacity="0.55"/>
+  <circle cx="548" cy="84" r="44" fill="#A855F7" opacity="0.45"/>
+  <circle cx="548" cy="84" r="26" fill="#7C3AED" opacity="0.9"/>
+  <ellipse cx="548" cy="84" rx="78" ry="21" fill="none" stroke="#C084FC" stroke-width="7" opacity="0.4"/>
+
+  <!-- Small moon (lower left) -->
+  <circle cx="104" cy="358" r="38" fill="#EDE0FF" opacity="0.65"/>
+  <circle cx="104" cy="358" r="26" fill="#DCC8FF" opacity="0.7"/>
+  <circle cx="96" cy="350" r="7" fill="#C4A8F5" opacity="0.35"/>
+  <circle cx="110" cy="365" r="4.5" fill="#C4A8F5" opacity="0.35"/>
+
+  <!-- Tether / safety line -->
+  <path d="M258 300 Q208 342 172 392" stroke="#C4A8F5" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="9 6"/>
+
+  <!-- Astronaut (slightly tilted for weightlessness) -->
+  <g transform="rotate(-9, 300, 215)">
+
+    <!-- Legs -->
+    <path d="M281 283 Q268 312 260 340" stroke="#6D28D9" stroke-width="19" stroke-linecap="round"/>
+    <ellipse cx="258" cy="348" rx="16" ry="10" fill="#5B21B6"/>
+
+    <path d="M319 283 Q332 312 340 340" stroke="#6D28D9" stroke-width="19" stroke-linecap="round"/>
+    <ellipse cx="342" cy="348" rx="16" ry="10" fill="#5B21B6"/>
+
+    <!-- Jetpack (behind torso, drawn first) -->
+    <rect x="329" y="212" width="25" height="46" rx="8" fill="#4C1D95"/>
+    <rect x="334" y="221" width="15" height="11" rx="4" fill="#5B21B6"/>
+    <rect x="335" y="254" width="5" height="8" rx="2.5" fill="#A855F7"/>
+    <rect x="344" y="254" width="5" height="8" rx="2.5" fill="#A855F7"/>
+
+    <!-- Torso -->
+    <rect x="267" y="210" width="66" height="75" rx="21" fill="#7C3AED"/>
+
+    <!-- Chest panel -->
+    <rect x="280" y="225" width="40" height="26" rx="6" fill="#5B21B6"/>
+    <circle cx="292" cy="238" r="4.5" fill="#EDE0FF" opacity="0.8"/>
+    <circle cx="303" cy="238" r="4.5" fill="#C4A8F5" opacity="0.8"/>
+    <circle cx="314" cy="238" r="4.5" fill="#A855F7"/>
+
+    <!-- Left arm (raised up — reaching out) -->
+    <path d="M267 232 Q244 215 228 200" stroke="#7C3AED" stroke-width="19" stroke-linecap="round"/>
+    <circle cx="222" cy="196" r="13" fill="#5B21B6"/>
+
+    <!-- Right arm (floating down) -->
+    <path d="M333 232 Q356 249 370 264" stroke="#7C3AED" stroke-width="19" stroke-linecap="round"/>
+    <circle cx="376" cy="270" r="13" fill="#5B21B6"/>
+
+    <!-- Neck -->
+    <rect x="289" y="206" width="22" height="10" rx="4" fill="#5B21B6"/>
+
+    <!-- Helmet -->
+    <circle cx="300" cy="167" r="48" fill="#7C3AED"/>
+    <circle cx="300" cy="167" r="36" fill="#1F114A"/>
+    <!-- Visor highlights -->
+    <ellipse cx="287" cy="154" rx="10" ry="13" fill="white" opacity="0.14" transform="rotate(-15 287 154)"/>
+    <ellipse cx="293" cy="149" rx="4.5" ry="7" fill="white" opacity="0.24" transform="rotate(-15 293 149)"/>
+    <!-- Helmet ring accent -->
+    <circle cx="300" cy="167" r="48" fill="none" stroke="#A855F7" stroke-width="4" opacity="0.35"/>
+
+    <!-- Antenna -->
+    <line x1="306" y1="119" x2="314" y2="97" stroke="#A855F7" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="316" cy="93" r="6" fill="#EDE0FF"/>
+    <circle cx="316" cy="93" r="3" fill="#A855F7"/>
+
+  </g>
+
+  <!-- Floating wrench (something is broken) -->
+  <g transform="translate(438, 180) rotate(40)">
+    <rect x="-3" y="-19" width="6" height="38" rx="2.5" fill="#C4A8F5"/>
+    <rect x="-9" y="-23" width="18" height="9" rx="4" fill="#A855F7"/>
+    <rect x="-9" y="14" width="18" height="9" rx="4" fill="#A855F7"/>
+  </g>
+
+  <!-- Sparkle 1 -->
+  <path d="M172 143 L175 154 L186 157 L175 160 L172 171 L169 160 L158 157 L169 154 Z" fill="#A855F7" opacity="0.42"/>
+
+  <!-- Sparkle 2 -->
+  <path d="M496 292 L498 300 L506 302 L498 304 L496 312 L494 304 L486 302 L494 300 Z" fill="#7C3AED" opacity="0.38"/>
+
+  <!-- Sparkle 3 -->
+  <path d="M56 192 L58 200 L66 202 L58 204 L56 212 L54 204 L46 202 L54 200 Z" fill="#A855F7" opacity="0.32"/>
+</svg>
