@@ -6,48 +6,20 @@ function LoginPage() {
   const [loginMethod, setLoginMethod] = useState('email')
 
   return (
-    <main className="login-page">
-      <section className="login-showcase">
-        <p className="login-eyebrow">Batylink workspace</p>
-        <h1>Sign in to manage bookings, campaigns, and provider leads.</h1>
-        <p className="login-copy">
-          Keep customer requests, service conversations, and team activity in one
-          focused workspace.
-        </p>
-
-        <div className="login-metrics">
-          <article>
-            <strong>48%</strong>
-            <span>faster handoff from request capture to first response</span>
-          </article>
-          <article>
-            <strong>12k</strong>
-            <span>monthly conversations tracked across customer and provider teams</span>
-          </article>
-        </div>
-      </section>
-
+    <main className="login-page login-page-centered">
       <section className="login-panel" aria-label="Login form">
         <div className="login-card">
+          <div className="login-brand">
+            <Link to="/" aria-label="Batylink home">
+              Batylink
+            </Link>
+          </div>
+
           <div className="login-card-header">
-            <p className="login-tag">Welcome back</p>
-            <h2>Login</h2>
-            <p>Choose your role and sign in with email, phone, OTP, or a connected account.</p>
+            <h1>Sign in or create account</h1>
           </div>
 
           <form className="login-form">
-            <fieldset className="login-segment-group">
-              <legend>Continue as</legend>
-              <label>
-                <input type="radio" name="role" value="customer" defaultChecked />
-                <span>Customer</span>
-              </label>
-              <label>
-                <input type="radio" name="role" value="provider" />
-                <span>Provider</span>
-              </label>
-            </fieldset>
-
             <fieldset className="login-method-group">
               <legend>Login method</legend>
               <label>
@@ -69,16 +41,6 @@ function LoginPage() {
                   onChange={() => setLoginMethod('phone')}
                 />
                 <span>Phone</span>
-              </label>
-              <label>
-                <input
-                  type="radio"
-                  name="method"
-                  value="otp"
-                  checked={loginMethod === 'otp'}
-                  onChange={() => setLoginMethod('otp')}
-                />
-                <span>OTP</span>
               </label>
             </fieldset>
 
@@ -130,70 +92,22 @@ function LoginPage() {
               </>
             )}
 
-            {loginMethod === 'otp' && (
-              <>
-                <label>
-                  Email or phone
-                  <input
-                    type="text"
-                    name="otp-destination"
-                    placeholder="name@company.com or +1 555 0100"
-                    autoComplete="username"
-                  />
-                </label>
-
-                <label>
-                  OTP code
-                  <input
-                    type="text"
-                    name="otp"
-                    inputMode="numeric"
-                    placeholder="Enter 6-digit code"
-                    autoComplete="one-time-code"
-                  />
-                </label>
-              </>
-            )}
-
             <div className="login-form-row">
               <label className="login-checkbox">
                 <input type="checkbox" name="remember" />
                 <span>Remember me</span>
               </label>
 
-              <a href="/">Forgot password?</a>
+              <Link to="/">Forgot password?</Link>
             </div>
 
             <button type="submit" className="login-submit">
-              Sign in
+              Continue
             </button>
-
-            <div className="login-divider">
-              <span>or continue with</span>
-            </div>
-
-            <div className="login-socials" aria-label="Social login options">
-              <button type="button" className="login-social-button">
-                <span className="social-mark google">G</span>
-                Google
-              </button>
-              <button type="button" className="login-social-button">
-                <span className="social-mark facebook">f</span>
-                Facebook
-              </button>
-              <button type="button" className="login-social-button">
-                <span className="social-mark youtube">YT</span>
-                YouTube
-              </button>
-            </div>
-
-            <Link to="/" className="login-guest">
-              Continue as guest
-            </Link>
           </form>
 
           <p className="login-footer">
-            Need an account? <Link to="/register">Register now</Link>
+            New to Batylink? <Link to="/register">Create your account</Link>
           </p>
         </div>
       </section>
