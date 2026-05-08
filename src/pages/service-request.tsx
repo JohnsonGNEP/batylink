@@ -26,10 +26,8 @@ function ServiceRequestPage() {
             </div> 
 
             <div className="service-request-textarea">
-                <fieldset>
-                    <legend>Incident Location *</legend>
-                    <input id='incident-location' placeholder='' required></input>
-                </fieldset>
+                <label htmlFor='incident-location'>Incident Location *</label>
+                <input id='incident-location' placeholder='' required></input>
             </div>  
 
             <div className="service-request-drop-down">

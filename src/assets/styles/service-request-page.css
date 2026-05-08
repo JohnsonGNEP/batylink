@@ -49,6 +49,7 @@
 }
 
 .service-request-content .service-request-textarea {
+  width: 100%;
   margin-top: 1rem;
   margin-bottom: 1rem;
   display: flex;
@@ -57,7 +58,7 @@
 }
 
 .service-request-drop-down {
-    width: 95%;
+    width: 100%;
     margin-top: 1rem;
     margin-bottom: 1rem;
     display: flex;
@@ -76,12 +77,8 @@
     box-sizing: border-box;
 }
 
-.service-request-textarea fieldset {
-    border: 0px solid #ccc; border-radius: 4px; padding: 10px;
-}
-
 #incident-location {
-    width: 95%;
+    width: 100%;
     padding: 0.75rem;
     border: 1px solid rgba(124, 58, 237, 0.18);
     border-radius: 6px;
@@ -89,10 +86,11 @@
     resize: vertical;
     font-size: 0.95rem;
     color: var(--text);
+    box-sizing: border-box;
 }
 
 #incident-description {
-    width: 95%;
+    width: 100%;
     min-height: 120px;
     padding: 0.75rem;
     border: 1px solid rgba(124, 58, 237, 0.18);
@@ -101,10 +99,11 @@
     resize: vertical;
     font-size: 0.95rem;
     color: var(--text);
+    box-sizing: border-box;
 }
 
 .service-request-file-upload {
-    width: 95%;
+    width: 100%;
     margin-top: 1rem;
     margin-bottom: 1rem;
     display: flex;
@@ -135,7 +134,7 @@
 }
 
 .service-request-submit {
-    width: 95%;
+    width: 100%;
     margin-top: 0.5rem;
     padding: 0.75rem;
     border: 1px solid rgba(124, 58, 237, 0.18);
